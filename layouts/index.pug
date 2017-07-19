@@ -1,0 +1,161 @@
+extends default.pug
+
+block content
+  #index
+  section.d-vh-60.m-vh-100.dark.intro
+    .container.pos-vertical-center
+      .row
+        .twelve.columns
+          h1.name jorrit #[br] elfferich.
+          p.hack #[span.red full-stack (web) developer] + 
+            | #[span.green wannabe designer] + 
+            | #[span.blue world traveller] + 
+            | #[span.purple ...]
+  #navigation.dark
+    .left
+      a#nav-logo.name.hidden(href="#index") jorrit.
+      #menu-button
+        button.hamburger.hamburger--collapse.randomColorMenu(type="button")
+          span.hamburger-box
+            span.hamburger-inner.randomColorMenu
+      .menu-wrapper.mobile-menu.randomColor.hack
+        a(href="#rtfm") rtfm
+        a(href="#about") about
+        a(href="#contact") contact
+    .right
+      .menu-wrapper.randomColor.hack
+        a(href="mailto:jorrit@elfferich") jorrit@elfferi.ch
+        a(href="https://www.facebook.com/jorrite/" target="_blank")
+          i.fa.fa-facebook(aria-hidden="true" target="_blank")
+        a(href="https://twitter.com/jorrite")
+          i.fa.fa-twitter(aria-hidden="true" target="_blank")
+        a(href="https://www.instagram.com/jorrite/" target="_blank")
+          i.fa.fa-instagram(aria-hidden="true")
+        a(href="https://github.com/jorrite" target="_blank")
+          i.fa.fa-github(aria-hidden="true")
+  section.vh-40
+  section.section.min-vh-100
+    .container
+      .row
+        .columns.twelve
+          br
+          br
+          h1#rtfm.center rtfm
+          br
+          h2.center Jorrit what? #[a.randomColor(href="https://en.wikipedia.org/wiki/RTFM" target="_blank") Read the #[span.italic fine] manual] about me.
+          br
+          br
+          br
+          #typed-strings.hack
+            p #[span.bold.white man] jorrit
+      .row
+        .offset-by-one.ten.columns
+          #man-console.console.dark.hack
+            .console-window
+              .header
+                span.icon.red
+                span.icon.yellow
+                span.icon.green
+              .body
+                pre #[span.red ○] #[span.blue ~] #[span.grey $] #[span#typed]#[span.custom-typed-cursor &nbsp;]
+                pre.man-result.hidden
+                  p.uppercase.bold.white Name
+                  p.indent jorrit &mdash; Jorrit Elfferich, human on planet earth.
+                  p.uppercase.bold.white Synopsis
+                  p.indent #[span.bold.white jorrit mode] #[span.underline [input...]]
+                  p.uppercase.bold.white Description
+                  p.indent #[span.bold.white jorrit] is a software engineer, designer, web enthousiast, traveller and much more. Using one of the supported #[span.bold.white modes], the human can take #[span.underline input] and turn it into output.
+                  p.uppercase.bold.white Mode
+                  p.indent #[span.bold.white jorrit] can operate in different modes. Specifically:
+                  p.indent #[span.bold.white create]
+                  p.indentx2 In creation mode the output is expected to be one of the following:
+                  ul.indentx2 
+                    li #[span.randomColor Code]. Requires an idea or specific requirements as input. Be advised that requirements have to be thorough and complete in order to get what you want.
+                    li #[span.randomColor Design]. Either software or other (aesthetic) design. Requires same input as #[span.randomColor code].
+                    li #[span.randomColor Advice]. Advice topics can range from: development, design, (web-) security, life, gaming, consumer electronics, sports and much, much more.
+                    li #[span.randomColor Ideas]. Key feature of #[span.bold.white jorrit] is idea-generation. Requires inspiration, social interactivity and brainstorming tools as input.
+                    li #[span.randomColor Other stuff]. #[span.bold.white jorrit] is capable of creating much more, not included in this manual.
+                  p.indent #[span.bold.white work]
+                  p.indentx2 Alias for #[span.bold.white create] but only in specific conditions.
+                  p.indent #[span.bold.white relax]
+                  p.indentx2 This mode does not guarantee any meaningful output, but can improve the output of subsequent #[span.bold.white create] or #[span.bold.white work] commands.
+                  p.indent #[span.bold.white play]
+                  p.indentx2 Subset of #[span.bold.white relax]. Requires specific 'play' input such as exercise equipment or gaming devices. 
+                  p.indent #[span.bold.white love]
+                  p.indentx2 Requires love as input.
+                  p.indent #[span.bold.white &lt;3]
+                  p.indentx2 Alias for #[span.bold.white love].
+                  p.uppercase.bold.white Input
+                  p.indent In order to get output #[span.bold.white jorrit] needs input (this follows #[a.randomColor(href="https://en.wikipedia.org/wiki/Laws_of_thermodynamics#First_law" target="_blank") the first law of thermodynamics]). Input can be specific to a #[span.bold.white mode] (see above), but certain inputs are considered to be equally effective. These inputs are, but not limited to:
+                  ul.indent 
+                    li Food. Be advised that jorrit is extremely picky and not all food is effective. Debugging jorrit or trial and error tests should be done in order to see which food is most effective.
+                    li Drinks. Water is sufficient in most if not all cases. Caffeinated drinks can be used to optimize output. #[a.randomColor(href="https://en.wikipedia.org/wiki/Mate_(beverage)" target="_blank") Mate] or specifically #[a.randomColor(href="https://en.wikipedia.org/wiki/Club-Mate" target="_blank") Club-Mate] has been proven a very effective drink in recent testing.
+                  p.indent Input is optional, but highly recommended. Be advised that oxygen is passed by default and merged with any other parameters (and thus never overwritten). Multiple parameters can be passed separated by a comma (,).
+              .footer
+                pre.man-result.hidden : #[span#expand-man-console.randomColor.underline.cursor-pointer expand] #[span.custom-typed-cursor &nbsp;]
+                pre.hidden #[span.red ○] #[span.blue ~] #[span.grey $] #[span.custom-typed-cursor &nbsp;]
+  section.section
+    .container
+      .row
+        .twelve.columns
+          .row
+            .six.columns.right
+              h1#about about
+          .row
+            .six.columns.right
+              h4 the short version
+            .six.columns
+              p.hack Dutchman to the core, professional software engineer, wannabe designer, avid traveller, amateur photographer, web enthousiast, team-player, creative thinker, playmaker, #[a.randomColor(href="https://en.wikipedia.org/wiki/AFC_Ajax" target="_blank") ajacied] and soon-to-be husband.
+          .row
+            .six.columns.right
+              h4 my story
+            .six.columns
+              p.hack Technology is my life-fuel. From a very young age I developed a passion for everything tech and computer related. I am currently living the dream by doing what I love for a living.
+              p.hack Besides nerdy stuff I love #[a.randomColor(href="https://en.wikipedia.org/wiki/Dieter_Rams#Dieter_Rams:_ten_principles_for_good_design" target="_blank") good design]. Marrying technology with sustainable design inspires me to do better with less.
+          .row
+            .six.columns.right
+              h4 other things
+            .six.columns
+              p.hack Other things that peak my interest are blockchain, photography, sports, gaming, health, #[a.randomColor(href="https://www.instagram.com/p/BR0PTZGhxcWfW2HaJTGFgaMMPyegWoftwyXVwE0/?taken-by=jorrite" target="_blank") cats], food and travel. 
+              p.hack All of these things are even better when I share them with my soon-to-be wife, Ellen.
+          .row
+            .six.columns.right
+              h4 skills
+            .six.columns
+              ul.hack.extra-margin
+                li Dutch
+                li English
+                li Back-end programming (#[a.revealExcerpt.randomColor.cursor-pointer languages]?) #[div.excerpt.hidden I believe the skill of programming and problem-solving is a far better skill than being good in any specific language. That being said, I have experience with: C, C++, C# (.NET), PHP and Node.js. #[br]#[br]#[a.hideExcerpt.randomColor.cursor-pointer (hide)]]
+                li Front-end programming (#[a.revealExcerpt.randomColor.cursor-pointer languages]?)#[div.excerpt.hidden I believe the skill of programming and problem-solving is a far better skill than being good in any specific language. That being said, I have experience with: HTML, CSS, Javascript (such as AngularJS 1 &amp; 2), Electron, Objective-C, Swift, Java (Android). #[br]#[br]#[a.hideExcerpt.randomColor.cursor-pointer (hide)]]
+                li DevOps (infra, CI+CD)
+                li Affinity Photo (a great Photoshop alternative)
+                li Affinity Designer (a great Illustrator alternative)
+  section.section
+    .container
+      .row
+        .twelve.columns
+          .row
+            .six.columns.right
+              h1#contact contact
+          .row
+            .six.columns.right
+              h4 drop me a line
+            .six.columns
+              p.hack Be sure to reach out if you have any questions. I'll do my very best to reply promptly. You can mail me at #[a.randomColor(href="mailto:jorrit@elfferi.ch") jorrit@elfferi.ch].
+  section.footer.randomColorBackground
+    .container
+      .row
+        .twelve.columns.center
+          h1 thanks
+          p.hack handcrafted by me | &copy; 2017
+          .mobile-icons
+            a(href="mailto:jorrit@elfferich")
+              i.fa.fa-envelope-o(aria-hidden="true" target="_blank")
+            a(href="https://www.facebook.com/jorrite/" target="_blank")
+              i.fa.fa-facebook(aria-hidden="true" target="_blank")
+            a(href="https://twitter.com/jorrite")
+              i.fa.fa-twitter(aria-hidden="true" target="_blank")
+            a(href="https://www.instagram.com/jorrite/" target="_blank")
+              i.fa.fa-instagram(aria-hidden="true")
+            a(href="https://github.com/jorrite" target="_blank")
+              i.fa.fa-github(aria-hidden="true")

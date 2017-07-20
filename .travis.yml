@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "6"
+script:
+  # generate website.
+  - node index.js
+deploy:
+  skip_cleanup: true
+  provider: surge
+  project: ./build/
+  domain: $SURGE_DOMAIN
+  on:
+    branch: master

@@ -3,7 +3,7 @@
 var
   consoleLog = false,
   nodeEnv = (process.env.NODE_ENV || '').trim().toLowerCase(),
-  devBuild = nodeEnv !== 'production',
+  devBuild = nodeEnv !== 'travis-default' && nodeEnv !== 'staging' && nodeEnv !== 'production',
   pkg = require('./package.json'),
   dir = {
     base: __dirname + '/',

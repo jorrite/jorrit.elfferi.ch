@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "6"
+git:
+  depth: 3
 script:
   # generate website.
   - export NODE_ENV=production

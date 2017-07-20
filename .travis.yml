@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - "6"
-script:
-  # generate website.
-  - export NODE_ENV=production
-  - node index.js
+git:
+  depth: 3
+script: .travis/build.sh
 deploy:
   - provider: surge
     skip_cleanup: true

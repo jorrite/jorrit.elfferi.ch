@@ -6,6 +6,7 @@ if [[ $TRAVIS_BRANCH == 'master' ]]
 then
   NODE_ENV=staging
 elif [[ $TRAVIS_BRANCH == 'production' ]]
+then
   NODE_ENV=production
 fi
 

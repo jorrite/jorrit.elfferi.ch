@@ -6,7 +6,8 @@ cache:
     - node_modules
 script:
   # generate website.
-  - export NODE_ENV=production & node index.js
+  - export NODE_ENV=production
+  - node index.js
 deploy:
   skip_cleanup: true
   provider: surge

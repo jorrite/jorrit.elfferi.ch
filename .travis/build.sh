@@ -10,6 +10,4 @@ then
   export NODE_ENV=production
 fi
 
-echo $NODE_ENV
-
 node index.js

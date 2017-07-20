@@ -1,6 +1,5 @@
 'use strict';
 
-console.log(process.env.NODE_ENV);
 var
   consoleLog = false,
   nodeEnv = (process.env.NODE_ENV || '').trim().toLowerCase(),

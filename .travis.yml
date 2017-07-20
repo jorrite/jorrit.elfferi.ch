@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - "6"
-cache:
-  directories:
-    - node_modules
 script:
   # generate website.
   - export NODE_ENV=production
@@ -15,3 +12,6 @@ deploy:
   domain: $SURGE_DOMAIN
   on:
     branch: master
+cache:
+  directories:
+    - node_modules

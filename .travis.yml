@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "6"
+script:
+  # generate website.
+  - export NODE_ENV=production
+  - node index.js
+deploy:
+  - provider: surge
+    skip_cleanup: true
+    project: ./build/
+    #my surge domain doesn't need to be out in the open. doesn't matter if anyone finds it, though.
+    domain: $SURGE_DOMAIN
+    on:
+      branch: master
+cache:
+  directories:
+    - node_modules

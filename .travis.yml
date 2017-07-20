@@ -12,6 +12,11 @@ deploy:
     domain: $SURGE_DOMAIN
     on:
       branch: master
+  - provider: firebase
+    skip_cleanup: true
+    token: $FIREBASE_TOKEN
+    on:
+      branch: production
 cache:
   directories:
     - node_modules

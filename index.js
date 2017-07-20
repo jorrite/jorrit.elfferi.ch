@@ -15,6 +15,7 @@ var
   layouts = require('metalsmith-layouts'),
   assets = require('metalsmith-assets'),
   webpack = require('metalsmith-webpack'),
+  robots = require('metalsmith-robots'),
   ignore = require('metalsmith-ignore'),
   path = require('path'),
   browsersync = devBuild ? require('metalsmith-browser-sync') : null,
@@ -30,7 +31,8 @@ var
   templateConfig = {
     engine: 'pug',
     pretty: true
-  };
+  }, 
+  robotsConfig = nodeEnv === 'production' ? {} : {useragent: '*', disallow: '/'};
 
 var ms = metalsmith(dir.base)
   .metadata(siteMeta)
@@ -76,6 +78,7 @@ ms
   //   source: dir.base + 'assets/',
   //   destination: './'
   // }))
+  .use(robots(robotsConfig))
   .build(function(err) {
     if (err) throw err;
   });

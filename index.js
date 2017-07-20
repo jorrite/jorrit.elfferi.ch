@@ -72,10 +72,10 @@ if (browsersync) ms.use(browsersync({
 }));
 
 ms
-  .use(assets({
-    source: dir.base + 'assets/',
-    destination: './'
-  }))
+  // .use(assets({
+  //   source: dir.base + 'assets/',
+  //   destination: './'
+  // }))
   .build(function(err) {
     if (err) throw err;
   });

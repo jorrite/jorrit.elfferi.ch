@@ -5,13 +5,17 @@ git:
   depth: 3
 script: .travis/build.sh
 deploy:
-  - provider: surge
     skip_cleanup: true
+  - provider: surge
     project: ./build/
     #my surge domain doesn't need to be out in the open. doesn't matter if anyone finds it, though.
     domain: $SURGE_DOMAIN
     on:
       branch: master
+  - provider: firebase
+      token: $FIREBASE_TOKEN
+    on:
+      branch: production
 cache:
   directories:
     - node_modules

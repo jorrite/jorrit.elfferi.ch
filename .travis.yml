@@ -6,12 +6,13 @@ script:
   - export NODE_ENV=production
   - node index.js
 deploy:
-  skip_cleanup: true
-  provider: surge
-  project: ./build/
-  domain: $SURGE_DOMAIN
-  on:
-    branch: master
+  - provider: surge
+    skip_cleanup: true
+    project: ./build/
+    #my surge domain doesn't need to be out in the open. doesn't matter if anyone finds it, though.
+    domain: $SURGE_DOMAIN
+    on:
+      branch: master
 cache:
   directories:
     - node_modules

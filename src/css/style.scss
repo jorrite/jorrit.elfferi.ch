@@ -189,24 +189,29 @@ ul{
   .right{
     text-align: right;
   }
-  a {
+  a{
     font-size: 1.3rem;
     padding:10px 20px;
     position: relative;
     text-decoration: none;
     user-select: none;
     float:left;
-    *{
-      background-color: $dark;
-      color: $red-on-dark;
-    }
-    &:hover{ 
+  }
+  .menu-wrapper{
+    a {
       *{
-        background-color: $red-on-dark;
-        color: $dark;
+        background-color: $dark;
+        color: $red-on-dark;
+      }
+      &:hover{ 
+        *{
+          background-color: $red-on-dark;
+          color: $dark;
+        }
       }
     }
   }
+
   .menu-wrapper{
     float:left;
   }
@@ -427,6 +432,9 @@ ul{
   -ms-animation: 1s blink step-end infinite;
   -o-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
+  &::before{
+    content: "\00a0";
+  }
 }
 @keyframes "blink" {
   from, to {

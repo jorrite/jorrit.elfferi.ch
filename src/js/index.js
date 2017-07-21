@@ -1,12 +1,13 @@
 window.$ = window.jQuery = require('jquery');
 require("jquery-sticky");
+let storage = require('local-storage-fallback');
 let Typed = require("typed.js");
-let previousColor = localStorage.getItem("previousColor");
+let previousColor = storage.getItem("previousColor");
 let colors = ['red', 'green', 'blue', 'purple'];
 let indexPreviousColor = colors.indexOf(previousColor);
 if (indexPreviousColor > -1) {colors.splice(indexPreviousColor, 1);}
 let randomColor = colors[Math.floor(Math.random() * colors.length)];
-localStorage.setItem("previousColor", randomColor);
+storage.setItem("previousColor", randomColor);
 
 let manConsoleScrolledIntoView = false;
 
